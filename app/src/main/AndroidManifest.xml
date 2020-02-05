@@ -14,9 +14,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
-        <receiver android:enabled="true" android:name=".BootReceiver">
+        <receiver android:name="com.joanmanera.chistedeldia.BootReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
             </intent-filter>
         </receiver>
         <service android:name=".ChisteService" android:enabled="true" android:exported="true"/>
